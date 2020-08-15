@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="activity_indicator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="K6u-cg-OIe">
+                                <rect key="frame" x="20" y="107" width="374" height="2"/>
+                            </progressView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="IF7-gi-2EW">
+                                <rect key="frame" x="20" y="162" width="376" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="SgV-sU-4r6"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="slider:" destination="BYZ-38-t0r" eventType="valueChanged" id="9EH-gk-aSk"/>
+                                </connections>
+                            </slider>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="2a4-AW-9WO">
+                                <rect key="frame" x="198" y="275" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="LyY-8I-WrG"/>
+                                </constraints>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="2a4-AW-9WO" firstAttribute="top" secondItem="IF7-gi-2EW" secondAttribute="bottom" constant="84" id="0LR-Ze-8xi"/>
+                            <constraint firstItem="K6u-cg-OIe" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="AEJ-Ur-3s8"/>
+                            <constraint firstItem="K6u-cg-OIe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Nas-Kl-S30"/>
+                            <constraint firstItem="2a4-AW-9WO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="198" id="Rzy-Hg-X73"/>
+                            <constraint firstItem="IF7-gi-2EW" firstAttribute="trailing" secondItem="K6u-cg-OIe" secondAttribute="trailing" id="dv2-0Y-xKG"/>
+                            <constraint firstItem="2a4-AW-9WO" firstAttribute="centerX" secondItem="IF7-gi-2EW" secondAttribute="centerX" id="gZw-oh-mXC"/>
+                            <constraint firstItem="IF7-gi-2EW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="22" id="ibL-5F-4wW"/>
+                            <constraint firstItem="K6u-cg-OIe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="63" id="tz4-c8-6za"/>
+                            <constraint firstItem="IF7-gi-2EW" firstAttribute="top" secondItem="K6u-cg-OIe" secondAttribute="bottom" constant="53" id="wEt-gN-Smr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="activity_indicator" destination="2a4-AW-9WO" id="TNf-4Y-Fz5"/>
+                        <outlet property="progressView" destination="K6u-cg-OIe" id="LH1-5a-cwf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="95.758928571428569"/>
+        </scene>
+    </scenes>
+</document>
